@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 全局样式 */
+html, body {
+    height: 100%; /* 设置html和body的高度为100% */
+    margin: 0;
+    padding: 0;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Noto Serif SC', serif;
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 垂直布局 */
+    min-height: 100vh; /* 最小高度为视窗高度 */
+    padding-top: 80px; /* 为固定头部留出空间 */
+	background-image: url('bg3.jpg'); /* 设置背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+}
+
+/* 头部（导航栏）样式 */
+header {
+    background-color: #333; /* 导航栏背景颜色 */
+    color: white; /* 导航栏文字颜色 */
+    text-align: center; /* 文本居中对齐 */
+    position: fixed; /* 固定位置，使导航栏始终显示在页面顶部 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 宽度为100% */
+    z-index: 10; /* 设置z-index以确保导航栏显示在内容之上 */
+    padding: 15px 0; /* 设置上下内边距 */
+}
+
+/* 导航菜单样式 */
+nav ul {
+    list-style-type: none; /* 移除列表标记 */
+    padding: 0;
+    margin: 0; /* 移除默认外边距 */
+    display: flex; /* 使用Flex布局 */
+    justify-content: center; /* 水平居中 */
+}
+
+nav ul li {
+    margin: 0 15px; /* 列表项间距 */
+}
+
+nav ul li a {
+    color: white; /* 链接颜色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: color 0.3s; /* 平滑颜色过渡 */
+}
+
+nav ul li a:hover {
+    color: #eaeaea; /* 鼠标悬停时的颜色 */
+}
+
+/* 调整关于本站部分的样式 */
+/*#about {
+    padding-top: 140px; /* 增加额外的顶部内边距以避免被头部遮挡 */
+    /* margin-top: -100px; /* 调整向上的外边距以保持页面流畅 */
+/*} 
+*/
+
+/* 内容区域 */
+.content {
+    flex: 1; /* 让内容区域灵活伸缩 */
+    padding: 20px; /* 内容区域的内边距 */
+    /* ... 其他样式 ... */
+}
+
+/* “关于本站”部分样式 */
+.info-section {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 主要内容区域样式 */
+section {
+    margin: 20px; /* 设置外边距 */
+    padding: 20px; /* 设置内边距 */
+    background-color: #fff; /* 设置背景颜色为白色 */
+    border-radius: 8px; /* 设置边框圆角 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
+    /*transition: transform 0.3s; /* 设置变换效果的过渡时间 */
+	scroll-margin-top: 100px; /* 为每个section添加额外的顶部空间 */
+}
+
+/* 文章标题样式 */
+article h3 {
+    color: #c20c0c; /* 设置标题的颜色 */
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center; /* 页脚文字居中对齐 */
+    padding: 10px 0; /* 设置页脚的上下内边距 */
+    background-color: #333; /* 设置页脚的背景颜色 */
+    color: #fff; /* 设置页脚文字颜色为白色 */
+	
+}
+
+/* 响应式布局 - 针对小屏幕设备 */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* 小屏幕下导航项垂直排列 */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* 设置导航项之间的垂直间距 */
+    }
+}
